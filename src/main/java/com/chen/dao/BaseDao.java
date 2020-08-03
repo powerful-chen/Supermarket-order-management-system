@@ -32,7 +32,7 @@ public class BaseDao {
         driver = properties.getProperty("driver");
         url = properties.getProperty("url");
         username = properties.getProperty("username");
-        password = properties.getProperty("passwrod");
+        password = properties.getProperty("password");
     }
 
     //获取数据的链接
@@ -48,7 +48,7 @@ public class BaseDao {
     }
 
     //编写查询公共方法
-    public static ResultSet execute(Connection connection, String sql, Object[] params, ResultSet resultSet, PreparedStatement preparedStatement) throws SQLException {
+    public static ResultSet execute(Connection connection, PreparedStatement preparedStatement, ResultSet resultSet, String sql, Object[] params) throws SQLException {
         preparedStatement = connection.prepareStatement(sql);
 
         for (int i = 0; i < params.length; i++) {
