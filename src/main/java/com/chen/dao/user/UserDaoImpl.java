@@ -15,6 +15,7 @@ import java.sql.SQLException;
  * @Date 2020/8/3 14:43
  */
 public class UserDaoImpl implements UserDao {
+    //得到要登录的用户
     @Override
     public User getLoginUser(Connection connection, String userCode) throws SQLException {
 
@@ -45,5 +46,20 @@ public class UserDaoImpl implements UserDao {
             BaseDao.closeResources(null, pstm, rs);
         }
         return user;
+    }
+
+    //修改当前用户密码
+    @Override
+    public int updatePwd(Connection connection, int id, String password) throws SQLException {
+
+        PreparedStatement pstm = null;
+        int execute = 0;
+        if (connection != null) {
+            Object[] params = {password, id};
+            String sql = "update smbms_user set userPassword = ? where id = ?";
+            execute = BaseDao.execute(connection, pstm, sql, params);
+            BaseDao.closeResources(null, pstm, null);
+        }
+        return execute;
     }
 }

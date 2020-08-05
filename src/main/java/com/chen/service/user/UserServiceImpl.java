@@ -4,7 +4,6 @@ import com.chen.dao.BaseDao;
 import com.chen.dao.user.UserDao;
 import com.chen.dao.user.UserDaoImpl;
 import com.chen.pojo.User;
-import org.junit.Test;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -40,10 +39,21 @@ public class UserServiceImpl implements UserService {
         return user;
     }
 
-    @Test
-    public void test() {
-        UserServiceImpl userService = new UserServiceImpl();
-        User admin = userService.login("admin", "1234342342");
-        System.out.println(admin.getUserPassword());
+    @Override
+    public boolean updatePwd(int id, String password) {
+        Connection connection = null;
+        boolean flag = false;
+        //修改密码
+        try {
+            connection = BaseDao.getConnection();
+            userDao.updatePwd(connection, id, password);
+            flag = true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            BaseDao.closeResources(connection, null, null);
+        }
+        return flag;
     }
+
 }
