@@ -17,6 +17,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -37,6 +40,12 @@ public class UserServlet extends HttpServlet {
             this.pwdModify(req, resp);
         } else if (method != null && method.equals("query")) {
             this.query(req, resp);
+        } else if (method != null && method.equals("add")) {
+            this.add(req, resp);
+        } else if (method != null && method.equals("getrolelist")) {
+            this.getRoleList(req, resp);
+        } else if (method != null && method.equals("ucexist")) {
+            this.userCodeExist(req, resp);
         }
     }
 
@@ -170,5 +179,81 @@ public class UserServlet extends HttpServlet {
 
         req.getRequestDispatcher("userlist.jsp").forward(req, resp);
     }
+
+    public void add(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+        System.out.println("add====================");
+        String userCode = req.getParameter("userCode");
+        String userName = req.getParameter("userName");
+        String userPassword = req.getParameter("userPassword");
+        String gender = req.getParameter("gender");
+        String birthday = req.getParameter("birthday");
+        String phone = req.getParameter("phone");
+        String address = req.getParameter("address");
+        String userRole = req.getParameter("userRole");
+
+        User user = new User();
+        user.setUserName(userName);
+        user.setUserCode(userCode);
+        user.setUserPassword(userPassword);
+        user.setAddress(address);
+
+        try {
+            user.setBirthday(new SimpleDateFormat("yyyy-MM-dd").parse(birthday));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        user.setGender(Integer.valueOf(gender));
+        user.setPhone(phone);
+        user.setUserRole(Integer.valueOf(userRole));
+        user.setCreationDate(new Date());
+        user.setCreatedBy(((User) req.getSession().getAttribute(Constants.USER_SESSION)).getId());
+        UserService userService = new UserServiceImpl();
+        if (userService.add(user)) {
+            resp.sendRedirect(req.getContextPath() + "/jsp/user.do?method=query");
+        } else {
+            req.getRequestDispatcher("useradd.jsp").forward(req, resp);
+        }
+    }
+
+    public void getRoleList(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+
+        List<Role> roleList = null;
+        RoleService roleService = new RoleServiceImpl();
+        roleList = roleService.getRoleList();
+        //把 roleList 转换 json 对象输出
+        resp.setContentType("application/json");
+        PrintWriter outPrintWriter = resp.getWriter();
+        outPrintWriter.write(JSONArray.toJSONString(roleList));
+        outPrintWriter.flush();
+        outPrintWriter.close();
+    }
+
+    public void userCodeExist(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        //判断用户账号是否可用
+        String userCode = req.getParameter("userCode");
+
+        HashMap<String, String> resultMap = new HashMap<>();
+        if (StringUtils.isNullOrEmpty(userCode)) {
+            resultMap.put("userCode", "exist");
+        } else {
+            UserService userService = new UserServiceImpl();
+            User user = userService.selectUserCodeExist(userCode);
+            if (user != null) {
+                resultMap.put("userCode", "exist");
+            } else {
+                resultMap.put("userCode", "noexist");
+            }
+        }
+        //把resultMap转为 json字符串以 json 的形式输出
+        //配置上下文的输出类型
+        resp.setContentType("application/json");
+        //从response对象中获取往外输出的 writer 对象
+        PrintWriter outPrintWriter = resp.getWriter();
+        //把resultMap转换为 json字符串输出
+        outPrintWriter.write(JSONArray.toJSONString(resultMap));
+        outPrintWriter.flush();//刷新
+        outPrintWriter.close();//关闭流
+    }
+
 
 }

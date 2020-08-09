@@ -98,6 +98,7 @@ public class UserDaoImpl implements UserDao {
         return count;
     }
 
+    //通过条件查询-userList
     @Override
     public List<User> getUserList(Connection connection, String userName, int userRole, int currentPageNo, int pageSize) throws SQLException {
 
@@ -143,4 +144,23 @@ public class UserDaoImpl implements UserDao {
         return userList;
     }
 
+    //添加用户信息
+    @Override
+    public int add(Connection connection, User user) throws SQLException {
+
+        PreparedStatement psvm = null;
+        int updateRows = 0;
+        if (connection != null) {
+            String sql = "insert into smbms_user(userCode, userName, userPassword," +
+                    "userRole, gender, birthday, phone, address,creationDate,createdBy)" +
+                    " values (?,?,?,?,?,?,?,?,?,?)";
+            Object[] params = {user.getUserCode(), user.getUserName(), user.getUserPassword(),
+                    user.getUserRole(), user.getGender(), user.getBirthday(), user.getPhone(),
+                    user.getAddress(), user.getCreationDate(), user.getCreatedBy()
+            };
+            updateRows = BaseDao.execute(connection, psvm, sql, params);
+            BaseDao.closeResources(null, psvm, null);
+        }
+        return updateRows;
+    }
 }

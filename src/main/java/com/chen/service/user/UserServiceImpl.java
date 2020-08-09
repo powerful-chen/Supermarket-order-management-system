@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -99,13 +100,70 @@ public class UserServiceImpl implements UserService {
         return userList;
     }
 
+    @Override
+    public boolean add(User user) {
+
+        boolean flag = false;
+        Connection connection = null;
+        if (user != null) {
+            try {
+                connection = BaseDao.getConnection();
+                connection.setAutoCommit(false);//开启JDBC事务
+                int updateRows = userDao.add(connection, user);
+                connection.commit();
+                if (updateRows > 0) {
+                    flag = true;
+                    System.out.println("add success!");
+                } else {
+                    System.out.println("add failed!");
+                }
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } finally {
+                //在service层进行connection连接关闭
+                BaseDao.closeResources(connection, null, null);
+            }
+        }
+        return flag;
+    }
+
+    //根据userCode查询出User
+    @Override
+    public User selectUserCodeExist(String userCode) {
+        Connection connection = null;
+        User user = null;
+        try {
+            connection = BaseDao.getConnection();
+            user = userDao.getLoginUser(connection, userCode);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            BaseDao.closeResources(connection, null, null);
+        }
+        return user;
+    }
+
     @Test
-    public void test(){
+    public void test() {
         UserService userService = new UserServiceImpl();
         //int userCount = userService.getUserCount(null, 0);
         //System.out.println(userCount);
 
-        List<User> userList = userService.getUserList("张", 0, 1, 5);
-        System.out.println(userList.toString());
+        //List<User> userList = userService.getUserList("张", 0, 1, 5);
+        //System.out.println(userList.toString());
+        User user = new User();
+        user.setUserCode("haha");
+        user.setUserName("哈哈");
+        user.setUserPassword("123123123");
+        user.setUserRole(3);
+        user.setGender(1);
+        user.setBirthday(new Date());
+        user.setPhone("12387514921");
+        user.setAddress("不知道");
+        user.setCreationDate(new Date());
+        user.setCreatedBy(1);
+        boolean add = userService.add(user);
+        System.out.println("add=" + add);
     }
 }
