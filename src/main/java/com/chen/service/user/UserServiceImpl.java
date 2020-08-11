@@ -4,6 +4,7 @@ import com.chen.dao.BaseDao;
 import com.chen.dao.user.UserDao;
 import com.chen.dao.user.UserDaoImpl;
 import com.chen.pojo.User;
+import com.mysql.jdbc.StringUtils;
 import org.junit.Test;
 
 import java.sql.Connection;
@@ -144,6 +145,77 @@ public class UserServiceImpl implements UserService {
         return user;
     }
 
+    //通过userId获取user
+    @Override
+    public User getUserById(String id) {
+
+        Connection connection = null;
+        User user = null;
+
+        try {
+            connection = BaseDao.getConnection();
+            user = userDao.getUserById(connection, id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            BaseDao.closeResources(connection, null, null);
+        }
+        return user;
+    }
+
+    //修改用户信息
+    @Override
+    public boolean modify(User user) {
+
+        Connection connection = null;
+        boolean flag = false;
+        try {
+            connection = BaseDao.getConnection();
+            connection.setAutoCommit(false);
+            int updateRows = userDao.modify(connection, user);
+            connection.commit();
+            if (updateRows > 0) {
+                flag = true;
+                System.out.println("update success");
+            } else {
+                flag = false;
+                System.out.println("update failed");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            BaseDao.closeResources(connection, null, null);
+        }
+
+        return flag;
+    }
+
+    //通过ID删除 user
+    @Override
+    public boolean deleteUserById(Integer delId) {
+
+        boolean flag = false;
+        Connection connection = null;
+
+        try {
+            connection = BaseDao.getConnection();
+            connection.setAutoCommit(false);
+            int i = userDao.deleteUserById(connection, delId);
+            connection.commit();
+            if (i > 0) {
+                flag = true;
+                System.out.println("delete success");
+            } else {
+                flag = false;
+                System.out.println("delete failed");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return flag;
+    }
+
     @Test
     public void test() {
         UserService userService = new UserServiceImpl();
@@ -152,18 +224,38 @@ public class UserServiceImpl implements UserService {
 
         //List<User> userList = userService.getUserList("张", 0, 1, 5);
         //System.out.println(userList.toString());
+
+
+        //User user = new User();
+        //        //user.setUserCode("haha");
+        //        //user.setUserName("哈哈");
+        //        //user.setUserPassword("123123123");
+        //        //user.setUserRole(3);
+        //        //user.setGender(1);
+        //        //user.setBirthday(new Date());
+        //        //user.setPhone("12387514921");
+        //        //user.setAddress("不知道");
+        //        //user.setCreationDate(new Date());
+        //        //user.setCreatedBy(1);
+        //        //boolean add = userService.add(user);
+        //        //System.out.println("add=" + add);
+
+
+        //User id = userService.getUserById("1");
+        //System.out.println(id);
+
         User user = new User();
-        user.setUserCode("haha");
-        user.setUserName("哈哈");
-        user.setUserPassword("123123123");
-        user.setUserRole(3);
+        user.setUserName("hhhhhhh");
         user.setGender(1);
         user.setBirthday(new Date());
         user.setPhone("12387514921");
         user.setAddress("不知道");
-        user.setCreationDate(new Date());
-        user.setCreatedBy(1);
-        boolean add = userService.add(user);
-        System.out.println("add=" + add);
+        user.setUserRole(3);
+        user.setModifyBy(1);
+        user.setModifyDate(new Date());
+        user.setId(16);
+
+        boolean modify = userService.modify(user);
+        System.out.println(modify);
     }
 }

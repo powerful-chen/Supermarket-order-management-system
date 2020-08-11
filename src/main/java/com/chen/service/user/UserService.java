@@ -28,4 +28,13 @@ public interface UserService {
 
     //根据userCode查询出User
     public User selectUserCodeExist(String userCode);
+
+    //通过userId获取user
+    public User getUserById(String id);
+
+    //修改用户信息
+    public boolean modify(User user);
+
+    //通过ID删除 user
+    public boolean deleteUserById(Integer delId);
 }

@@ -7,21 +7,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38e5ccfb-3219-4a41-a9d5-e4dba6f6fff2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/useradd.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/usermodify.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/userview.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chen/dao/user/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chen/dao/user/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chen/dao/user/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chen/dao/user/UserDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chen/service/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chen/service/user/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chen/service/user/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chen/service/user/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chen/servlet/user/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chen/servlet/user/UserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/smbms.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/chen/dao/user/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chen/dao/user/UserDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/chen/dao/user/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chen/dao/user/UserDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/chen/service/user/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chen/service/user/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/chen/service/user/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chen/service/user/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/chen/servlet/user/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chen/servlet/user/UserServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/smbms-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/smbms-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/smbms-1.0-SNAPSHOT/WEB-INF/classes/META-INF/smbms.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/smbms-1.0-SNAPSHOT/WEB-INF/classes/com/chen/dao/user/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/smbms-1.0-SNAPSHOT/WEB-INF/classes/com/chen/dao/user/UserDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/smbms-1.0-SNAPSHOT/WEB-INF/classes/com/chen/dao/user/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/smbms-1.0-SNAPSHOT/WEB-INF/classes/com/chen/dao/user/UserDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/smbms-1.0-SNAPSHOT/WEB-INF/classes/com/chen/service/user/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/smbms-1.0-SNAPSHOT/WEB-INF/classes/com/chen/service/user/UserService.class" afterDir="false" />
@@ -88,62 +87,55 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/servlet/user/UserServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="250" column="54" lean-forward="true" selection-start-line="250" selection-start-column="54" selection-end-line="250" selection-end-column="54" />
+            <state relative-caret-position="330">
+              <caret line="329" column="35" lean-forward="true" selection-start-line="329" selection-start-column="35" selection-end-line="329" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#updatePwd#0;class#UserServlet#0" />
                 <element signature="method#pwdModify#0;class#UserServlet#0" />
                 <element signature="method#query#0;class#UserServlet#0" />
+                <element signature="method#add#0;class#UserServlet#0" />
+                <element signature="method#getRoleList#0;class#UserServlet#0" />
+                <element signature="method#userCodeExist#0;class#UserServlet#0" />
+                <element signature="method#getUserById#0;class#UserServlet#0" />
+                <element signature="method#moidfy#0;class#UserServlet#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/useradd.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/usermodify.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="21" column="64" lean-forward="true" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/usermodify.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="418">
-              <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+              <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/service/user/UserService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/userlist.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="220">
+              <caret line="10" column="38" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/dao/user/UserDao.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/userlist.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/dao/user/UserDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#updatePwd#0;class#UserDaoImpl#0" />
-                <element signature="method#getUserCount#0;class#UserDaoImpl#0" />
-                <element signature="method#getUserList#0;class#UserDaoImpl#0" />
-              </folding>
+            <state relative-caret-position="154">
+              <caret line="58" column="28" lean-forward="true" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -163,6 +155,7 @@
       <find>pagein</find>
       <find>add</find>
       <find>userCode</find>
+      <find>gender</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -198,12 +191,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/chen/service/role/RoleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chen/service/role/RoleServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chen/util/Constants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chen/dao/user/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/useradd.js" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d8fc0219-be92-4bb7-8b03-69ae3da35755/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chen/dao/user/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chen/dao/user/UserDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chen/service/user/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chen/service/user/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/useradd.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/chen/servlet/user/UserServlet.java" />
       </list>
     </option>
@@ -247,7 +240,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="763" />
+    <option name="x" value="787" />
+    <option name="y" value="10" />
     <option name="width" value="1125" />
     <option name="height" value="1028" />
   </component>
@@ -342,17 +336,6 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="chen" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="role" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smbms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smbms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="chen" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -375,16 +358,6 @@
               <item name="chen" type="462c0819:PsiDirectoryNode" />
               <item name="servlet" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smbms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smbms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="chen" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="smbms" type="b2602c69:ProjectViewProjectNode" />
@@ -399,14 +372,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smbms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smbms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="smbms" type="b2602c69:ProjectViewProjectNode" />
@@ -613,50 +578,50 @@
       <option name="presentableId" value="Default" />
       <updated>1596350885225</updated>
       <workItem from="1596350888911" duration="57419000" />
-      <workItem from="1596767594163" duration="21097000" />
+      <workItem from="1596767594163" duration="42676000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserServiceImpl_test - 2020.08.06 at 11h 27m 43s.xml">
+    <history-entry file="UserServiceImpl_test - 2020.08.09 at 15h 39m 29s.xml">
       <configuration name="UserServiceImpl.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceImpl_test - 2020.08.06 at 11h 28m 28s.xml">
+    <history-entry file="UserServiceImpl_test - 2020.08.09 at 15h 40m 53s.xml">
       <configuration name="UserServiceImpl.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceImpl_test - 2020.08.06 at 11h 29m 10s.xml">
+    <history-entry file="UserServiceImpl_test - 2020.08.09 at 15h 43m 00s.xml">
       <configuration name="UserServiceImpl.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceImpl_test - 2020.08.06 at 11h 29m 28s.xml">
+    <history-entry file="UserServiceImpl_test - 2020.08.09 at 15h 46m 26s.xml">
       <configuration name="UserServiceImpl.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceImpl_test - 2020.08.06 at 11h 30m 43s.xml">
+    <history-entry file="UserServiceImpl_test - 2020.08.09 at 15h 47m 18s.xml">
       <configuration name="UserServiceImpl.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceImpl_test - 2020.08.06 at 11h 33m 56s.xml">
+    <history-entry file="UserServiceImpl_test - 2020.08.09 at 20h 04m 00s.xml">
       <configuration name="UserServiceImpl.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RoleServiceImpl_test - 2020.08.06 at 12h 32m 56s.xml">
-      <configuration name="RoleServiceImpl.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RoleServiceImpl_test - 2020.08.06 at 12h 33m 13s.xml">
-      <configuration name="RoleServiceImpl.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserServiceImpl_test - 2020.08.08 at 17h 00m 47s.xml">
+    <history-entry file="UserServiceImpl_test - 2020.08.09 at 20h 05m 21s.xml">
       <configuration name="UserServiceImpl.test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserServiceImpl_test - 2020.08.08 at 17h 03m 28s.xml">
+    <history-entry file="UserServiceImpl_test - 2020.08.09 at 20h 05m 30s.xml">
+      <configuration name="UserServiceImpl.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServiceImpl_test - 2020.08.09 at 20h 05m 48s.xml">
+      <configuration name="UserServiceImpl.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServiceImpl_test - 2020.08.09 at 20h 08m 56s.xml">
       <configuration name="UserServiceImpl.test" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78516000" />
+    <option name="totallyTimeSpent" value="100095000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="611" y="0" width="900" height="822" extended-state="0" />
+    <frame x="630" y="8" width="900" height="822" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24109264" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.20546319" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -665,28 +630,28 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Application Servers" order="0" weight="0.32886904" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32886904" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32882884" />
       <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="4" weight="0.32844576" />
+      <window_info anchor="bottom" id="Messages" order="4" weight="0.32697946" />
       <window_info anchor="bottom" id="Java Enterprise" order="5" weight="0.32886904" />
       <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32886904" />
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.32886904" />
-      <window_info active="true" anchor="bottom" id="Run" order="10" visible="true" weight="0.3168168" />
-      <window_info anchor="bottom" id="Debug" order="11" weight="0.398827" />
+      <window_info anchor="bottom" id="Run" order="10" visible="true" weight="0.34984985" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.26576576" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="14" />
-      <window_info anchor="bottom" id="Database Console" order="15" weight="0.39285713" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.3918919" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24821852" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.18498659" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.18289787" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.22446556" />
+      <window_info anchor="right" id="Database" order="6" weight="0.19002375" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
@@ -699,115 +664,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/public.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="77" column="6" lean-forward="true" selection-start-line="77" selection-start-column="6" selection-end-line="77" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/frame.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/common/foot.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="90" lean-forward="true" selection-start-line="6" selection-start-column="90" selection-end-line="6" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/common/head.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/servlet/user/LogoutServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/error.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/filter/CharacterEncodingFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/filter/SysFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="62" column="42" lean-forward="true" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/pwdmodify.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="19" column="35" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/rollpage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/pwdmodify.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="69" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://d8fc0219-be92-4bb7-8b03-69ae3da35755/schema/smbms/table/smbms_user" />
-    <entry file="das://d8fc0219-be92-4bb7-8b03-69ae3da35755/schema/smbms/table/smbms_user.sql" />
     <entry file="jar://D:/java/jdk 1.8/src.zip!/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -838,16 +694,6 @@
     </entry>
     <entry file="das://d8fc0219-be92-4bb7-8b03-69ae3da35755/schema/smbms/table/smbms_role.sql" />
     <entry file="das://d8fc0219-be92-4bb7-8b03-69ae3da35755/schema/smbms/table/smbms_role" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/dao/BaseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-511">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/dao/role/RoleDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -865,13 +711,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/userlist.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -929,20 +768,6 @@
           <filtering>
             <filter text="" />
           </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d8fc0219-be92-4bb7-8b03-69ae3da35755/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="119" lean-forward="true" selection-end-column="119" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/userlist.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="26" column="72" lean-forward="true" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
         </state>
       </provider>
     </entry>
@@ -1034,10 +859,195 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/dao/user/UserDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/useradd.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        <state relative-caret-position="-388">
+          <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/useradd.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/userview.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/userview.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d8fc0219-be92-4bb7-8b03-69ae3da35755/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="55" selection-start-column="55" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://d8fc0219-be92-4bb7-8b03-69ae3da35755/schema/smbms/table/smbms_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="48aba990-9dd5-44a9-b667-800bbdecfe5a">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://d8fc0219-be92-4bb7-8b03-69ae3da35755/schema/smbms/table/smbms_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="48aba990-9dd5-44a9-b667-800bbdecfe5a">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://d8fc0219-be92-4bb7-8b03-69ae3da35755/schema/smbms/table/smbms_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="48aba990-9dd5-44a9-b667-800bbdecfe5a">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://d8fc0219-be92-4bb7-8b03-69ae3da35755/schema/smbms/table/smbms_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="48aba990-9dd5-44a9-b667-800bbdecfe5a">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/dao/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://d8fc0219-be92-4bb7-8b03-69ae3da35755/schema/smbms/table/smbms_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="48aba990-9dd5-44a9-b667-800bbdecfe5a">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://d8fc0219-be92-4bb7-8b03-69ae3da35755/schema/smbms/table/smbms_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="48aba990-9dd5-44a9-b667-800bbdecfe5a">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://d8fc0219-be92-4bb7-8b03-69ae3da35755/schema/smbms/table/smbms_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="48aba990-9dd5-44a9-b667-800bbdecfe5a">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://d8fc0219-be92-4bb7-8b03-69ae3da35755/schema/smbms/table/smbms_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="48aba990-9dd5-44a9-b667-800bbdecfe5a">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://d8fc0219-be92-4bb7-8b03-69ae3da35755/schema/smbms/table/smbms_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="48aba990-9dd5-44a9-b667-800bbdecfe5a">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://d8fc0219-be92-4bb7-8b03-69ae3da35755/schema/smbms/table/smbms_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="48aba990-9dd5-44a9-b667-800bbdecfe5a">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://d8fc0219-be92-4bb7-8b03-69ae3da35755/schema/smbms/table/smbms_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="48aba990-9dd5-44a9-b667-800bbdecfe5a">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/usermodify.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="21" column="64" lean-forward="true" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://d8fc0219-be92-4bb7-8b03-69ae3da35755/schema/smbms/table/smbms_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="48aba990-9dd5-44a9-b667-800bbdecfe5a">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/usermodify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/service/user/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="214" column="9" selection-start-line="214" selection-start-column="9" selection-end-line="214" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#login#0;class#UserServiceImpl#0" />
+            <element signature="method#updatePwd#0;class#UserServiceImpl#0" />
+            <element signature="method#getUserCount#0;class#UserServiceImpl#0" />
+            <element signature="method#getUserList#0;class#UserServiceImpl#0" />
+            <element signature="method#add#0;class#UserServiceImpl#0" />
+            <element signature="method#selectUserCodeExist#0;class#UserServiceImpl#0" />
+            <element signature="method#getUserById#0;class#UserServiceImpl#0" />
+            <element signature="method#modify#0;class#UserServiceImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/service/user/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="37" column="4" lean-forward="true" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1046,64 +1056,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/dao/user/UserDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+        <state relative-caret-position="228">
+          <caret line="217" column="20" selection-start-line="217" selection-start-column="20" selection-end-line="217" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getLoginUser#0;class#UserDaoImpl#0" />
             <element signature="method#updatePwd#0;class#UserDaoImpl#0" />
             <element signature="method#getUserCount#0;class#UserDaoImpl#0" />
             <element signature="method#getUserList#0;class#UserDaoImpl#0" />
+            <element signature="method#add#0;class#UserDaoImpl#0" />
+            <element signature="method#getUserById#0;class#UserDaoImpl#0" />
+            <element signature="method#modify#0;class#UserDaoImpl#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/useradd.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/dao/user/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/service/user/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        <state relative-caret-position="425">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/service/user/UserServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/userlist.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="132" column="16" selection-start-line="132" selection-start-column="16" selection-end-line="132" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#login#0;class#UserServiceImpl#0" />
-            <element signature="method#updatePwd#0;class#UserServiceImpl#0" />
-            <element signature="method#getUserCount#0;class#UserServiceImpl#0" />
-            <element signature="method#getUserList#0;class#UserServiceImpl#0" />
-          </folding>
+        <state relative-caret-position="154">
+          <caret line="58" column="28" lean-forward="true" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/useradd.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/userlist.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-388">
-          <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+        <state relative-caret-position="220">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chen/servlet/user/UserServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="250" column="54" lean-forward="true" selection-start-line="250" selection-start-column="54" selection-end-line="250" selection-end-column="54" />
+        <state relative-caret-position="330">
+          <caret line="329" column="35" lean-forward="true" selection-start-line="329" selection-start-column="35" selection-end-line="329" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#updatePwd#0;class#UserServlet#0" />
             <element signature="method#pwdModify#0;class#UserServlet#0" />
             <element signature="method#query#0;class#UserServlet#0" />
+            <element signature="method#add#0;class#UserServlet#0" />
+            <element signature="method#getRoleList#0;class#UserServlet#0" />
+            <element signature="method#userCodeExist#0;class#UserServlet#0" />
+            <element signature="method#getUserById#0;class#UserServlet#0" />
+            <element signature="method#moidfy#0;class#UserServlet#0" />
           </folding>
         </state>
       </provider>
